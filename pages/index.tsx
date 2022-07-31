@@ -1,6 +1,17 @@
+import CardSection from "@components/card-section";
+import type { StatusType } from "@models/status";
+
+const statuses: StatusType[] = ["FOUND", "HANDLING", "RESOLVED", "HOLD"];
+
 const HomePage = () => {
   return (
-    <h1 className="flex justify-center items-center text-5xl">Tailwind</h1>
+    <div className="p-3">
+      <div className="grid gap-4 lg:grid-cols-4">
+        {statuses.map((status) => (
+          <CardSection key={status} status={status} />
+        ))}
+      </div>
+    </div>
   );
 };
 
