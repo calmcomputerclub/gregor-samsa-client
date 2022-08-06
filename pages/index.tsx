@@ -1,7 +1,7 @@
 import CardSection from "@components/card-section";
 import type { StatusType } from "@models/status";
 
-const statuses: StatusType[] = ["FOUND", "HANDLING", "RESOLVED", "HOLD"];
+const statuses: StatusType[] = ["등록", "처리중", "해결", "보류"];
 
 const HomePage = () => {
   return (

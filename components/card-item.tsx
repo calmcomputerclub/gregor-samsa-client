@@ -11,7 +11,10 @@ const CardItem = ({ title, content }: Props) => {
     router.push("/card/1");
   };
   return (
-    <div className="bg-white p-2 rounded-md" onClick={handleClick}>
+    <div
+      className="bg-white p-2 rounded-md hover:bg-indigo-100 cursor-pointer"
+      onClick={handleClick}
+    >
       <p>{title}</p>
       <p>{content}</p>
     </div>

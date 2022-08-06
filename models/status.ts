@@ -1,1 +1,1 @@
-export type StatusType = "FOUND" | "HANDLING" | "RESOLVED" | "HOLD";
+export type StatusType = "등록" | "처리중" | "해결" | "보류";
