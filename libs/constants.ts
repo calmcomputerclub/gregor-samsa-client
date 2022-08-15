@@ -1,1 +1,1 @@
-export const PAGE_TITLE = "samsa";
+export const PAGE_TITLE = "samsa"

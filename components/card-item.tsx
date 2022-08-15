@@ -1,24 +1,20 @@
-import { useRouter } from "next/router";
+import Link from "next/link"
 
 interface Props {
-  title: string;
-  content: string;
+  id: string
+  title: string
+  content: string
 }
 
-const CardItem = ({ title, content }: Props) => {
-  const router = useRouter();
-  const handleClick = () => {
-    router.push("/card/1");
-  };
+const CardItem = ({ title, content, id }: Props) => {
   return (
-    <div
-      className="bg-white p-2 rounded-md hover:bg-indigo-100 cursor-pointer"
-      onClick={handleClick}
-    >
-      <p>{title}</p>
-      <p>{content}</p>
-    </div>
-  );
-};
+    <Link href={`/samsa/${id}`}>
+      <div className="bg-white p-2 rounded-md hover:bg-indigo-100 cursor-pointer">
+        <p>{title}</p>
+        <p>{content}</p>
+      </div>
+    </Link>
+  )
+}
 
-export default CardItem;
+export default CardItem

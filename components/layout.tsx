@@ -1,25 +1,26 @@
-import Link from "next/link";
-import type { ReactNode } from "react";
-import MainTitle from "./main-title";
+import { PAGE_TITLE } from "@libs/constants"
+import Link from "next/link"
+import { ReactNode } from "react"
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode
+  navButton?: ReactNode
 }
 
-const Layout = ({ children }: Props) => {
+const Layout = ({ children, navButton }: Props) => {
   return (
     <div className="container mx-auto">
       <nav className="mx-auto flex justify-between items-center border-b border-indigo-600 p-2">
-        <MainTitle />
-        <Link href="/write">
-          <button className="rounded-md bg-indigo-500 hover:bg-indigo-300 p-1 text-white text-base  md:text-lg px-2">
-            등록하기
-          </button>
-        </Link>
+        <header className="flex-1">
+          <h1 className="text-5xl text-black dark:text-indigo-500 hidden md:block">
+            <Link href="/">{PAGE_TITLE}</Link>
+          </h1>
+        </header>
+        {navButton && navButton}
       </nav>
-      <main>{children}</main>
+      <main className="pt-4">{children}</main>
     </div>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

@@ -1,4 +1,4 @@
 export interface CardType {
-  title: string;
-  content: string;
+  title: string
+  content: string
 }
